@@ -1,4 +1,0 @@
-1. working with props
-2. understanding the children property
-3. usign react state
-4. handling event with methods
