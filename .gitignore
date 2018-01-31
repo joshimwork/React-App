@@ -9,6 +9,7 @@
 # production
 /build
 
+*.json
 # misc
 .DS_Store
 .env.local
@@ -16,7 +17,7 @@
 .env.test.local
 .env.production.local
 
-registerServiceWorker.sj
+registerServiceWorker.js
 App.test.js
 pacakde-lock.json
 package.json

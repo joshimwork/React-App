@@ -4,34 +4,27 @@ import Person from './Person/Person';
 
 
 class App extends Component {
+	
 	state = {
-		showDiv: false
+		name: 'John Doe',
+		age: 25
 	}
 
-	toggleShow = () => {
-		const doesShow = this.state.showDiv;
+	changeName = (event) => {
 		this.setState({
-			showDiv: !doesShow
+			name: event.target.value
 		})
-	}
+		};
 
   render() {
-
-  	let personDiv = null;
-  	if(this.state.showDiv){
-  		personDiv = (
-			<div>
-				<Person />
-			</div> 
-  			)
-  		}
     return (
 		<div className="App">
 			<h2>App Heading</h2>
-			<button onClick = {this.toggleShow}>Show / Hide</button>
-			{personDiv}
-			
-				
+			<input type='text' onChange={this.changeName} value={this.state.name}/>
+			<h4>Input Name: {this.state.name}</h4>
+
+			<Person />
+
 		</div>
     	)
   }
