@@ -16,17 +16,22 @@ class App extends Component {
 	}
 
   render() {
+
+  	let personDiv = null;
+  	if(this.state.showDiv){
+  		personDiv = (
+			<div>
+				<Person />
+			</div> 
+  			)
+  		}
     return (
 		<div className="App">
 			<h2>App Heading</h2>
 			<button onClick = {this.toggleShow}>Show / Hide</button>
+			{personDiv}
 			
-			{ this.state.showDiv ?
-
-				<div>
-					<Person />
-				</div> : null
-			}
+				
 		</div>
     	)
   }
